@@ -40,7 +40,7 @@ So the chain is `nuget delivers RippleRestoreTask` > `RippleRestoreTask triggers
 
 ## What is doesn't do
 
-RippleRestoreTask is targeted at providing one specific feature i.e. "Restoring dependencies as part of a build". Id you want to use the other more advanced [commands of Ripple](http://darthfubumvc.github.io/ripple/ripple/commands/) you should call ripple.exe explicitly. This can be done at a machine level by adding Ripple.exe to your Path environment variable  
+RippleRestoreTask is targeted at providing one specific feature i.e. "Restoring dependencies as part of a build". If you want to use the other more advanced [commands of Ripple](http://darthfubumvc.github.io/ripple/ripple/commands/) you should call ripple.exe explicitly. This can be done at a machine level by adding Ripple.exe to your Path environment variable  
 
 ## Other bits
 
