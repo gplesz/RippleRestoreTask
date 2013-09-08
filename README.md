@@ -1,22 +1,24 @@
 RippleRestoreTask
 =================
 
-## What is [Ripple](http://darthfubumvc.github.io/ripple/ripple/)? 
-
-> Ripple is a new kind of package manager that was created out of heavy usage of the standard NuGet client. The feeds, the protocol, and the packages are the same. Ripple just embodies differing opinions and provides a new way of consuming them that is friendlier for continuous integration.
-
-The specific functionality we are interested in is [Ripple Restore](http://darthfubumvc.github.io/ripple/ripple/commands/restore/) 
+![](https://raw.github.com/Particular/RippleRestoreTask/master/Icons/package_icon.png)
 
 ## How to get it
 
 [RippleRestoreTask is hosted on nuget](https://www.nuget.org/packages/RippleRestoreTask/)  
 
-And can eb installed by running the following in the **Package Management Console:**
+And can be installed by running the following in the **Package Management Console:**
 
     PM> Get-Project -All | Install-Package RippleRestoreTask
  
 
 ## What does RippleRestoreTask do? 
+
+### Firstly what is [Ripple](http://darthfubumvc.github.io/ripple/ripple/)? 
+
+> Ripple is a new kind of package manager that was created out of heavy usage of the standard NuGet client. The feeds, the protocol, and the packages are the same. Ripple just embodies differing opinions and provides a new way of consuming them that is friendlier for continuous integration.
+
+The specific functionality we are interested in is [Ripple Restore](http://darthfubumvc.github.io/ripple/ripple/commands/restore/) 
 
 Ripple work remarkable well at restoring dependencies. So you can avoid checking in your dependencies and then run `ripple.exe restore` before building to restore your dependencies. However it does not handle two problems 
 
