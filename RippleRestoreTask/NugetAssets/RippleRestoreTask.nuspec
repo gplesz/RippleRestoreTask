@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata  minClientVersion="2.7">
+    <id>RippleRestoreTask</id>
+    <version>$version$</version>
+    <title>RippleRestoreTask</title>
+    <authors>NServiceBus Ltd</authors>
+    <owners>nservicebus, simoncropp</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>http://github.com/Particular/RippleRestoreTask</projectUrl>
+    <iconUrl>https://raw.github.com/Particular/RippleRestoreTask/master/Icons/package_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Uses Ripple.exe to restore packages.</description>
+    <language>en-AU</language>
+    <tags>Nuget, Ripple, Package Restore</tags>
+  </metadata>
+</package>

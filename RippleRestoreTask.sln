@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RippleRestoreTask", "RippleRestoreTask\RippleRestoreTask.csproj", "{2BD57662-0649-4E2A-A060-047F342F68CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RippleRestoreTask.Tests", "RippleRestoreTask.Tests\RippleRestoreTask.Tests.csproj", "{74E5728E-49E8-49FC-A4B1-C95A44041351}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2BD57662-0649-4E2A-A060-047F342F68CA}.Release|x86.ActiveCfg = Release|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{74E5728E-49E8-49FC-A4B1-C95A44041351}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
