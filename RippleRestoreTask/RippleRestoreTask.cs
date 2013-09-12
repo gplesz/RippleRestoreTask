@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using FubuCore.Logging;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
@@ -56,12 +58,25 @@ namespace RippleRestoreTask
             SolutionFiles.CheckForClassic = false;
 
             var restoreCommand = new RestoreCommand();
+            var solution = SolutionBuilder.ReadFrom(targetDirectory);
+            if (RestoreAlreadyDone(solution))
+            {
+                return;
+            }
+
             var expression = RippleOperation
-                .With(SolutionBuilder.ReadFrom(targetDirectory));
+                .With(solution);
 
             RippleLog.RemoveFileListener();
             RippleLog.RegisterListener(logListener);
             expression.Execute(new RestoreInput(), restoreCommand);
+        }
+
+        static bool RestoreAlreadyDone(Solution solution)
+        {
+            var packagesDirectory = solution.PackagesDirectory();
+            return Directory.EnumerateDirectories(packagesDirectory)
+                .Count(x => !Path.GetFileName(x).StartsWith("RippleRestoreTask")) > 0;
         }
     }
 }

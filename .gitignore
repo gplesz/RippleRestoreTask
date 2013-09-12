@@ -13,6 +13,8 @@
 *.ncrunchsolution
 *.ncrunchproject
 
+run-git.cmd
+
 *.DotSettings
 
 # Build results
