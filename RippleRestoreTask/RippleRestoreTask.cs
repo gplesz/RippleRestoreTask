@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using FubuCore.Logging;
@@ -44,7 +43,6 @@ namespace RippleRestoreTask
             finally
             {
                 RippleLog.Reset();
-                SolutionFiles.CheckForClassic = true;
             }
         }
 
@@ -55,14 +53,21 @@ namespace RippleRestoreTask
 
         public static void InnerExecute(ILogListener logListener, string targetDirectory)
         {
-            SolutionFiles.CheckForClassic = false;
-
             var restoreCommand = new RestoreCommand();
-            var solution = SolutionBuilder.ReadFrom(targetDirectory);
-            if (RestoreAlreadyDone(solution))
-            {
-                return;
-            }
+
+            var basic = SolutionFiles.Basic();
+            basic.RootDir = targetDirectory;
+            basic.BuildSupportDir = Path.Combine(targetDirectory, "buildsupport");
+
+            var solutionFiles = SolutionFiles.FromDirectory(targetDirectory);
+
+            var builder = new SolutionBuilder(solutionFiles, ProjectReader.Basic());
+            var solution = builder.Build();
+
+            //if (RestoreAlreadyDone(solution))
+            //{
+            //    return;
+            //}
 
             var expression = RippleOperation
                 .With(solution);

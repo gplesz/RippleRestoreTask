@@ -3,5 +3,5 @@
 [assembly: AssemblyTitle("RippleRestoreTask")]
 [assembly: AssemblyProduct("RippleRestoreTask")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
-[assembly: AssemblyVersion("0.1.2")]
-[assembly: AssemblyFileVersion("0.1.2")]
+[assembly: AssemblyVersion("0.1.4")]
+[assembly: AssemblyFileVersion("0.1.4")]
