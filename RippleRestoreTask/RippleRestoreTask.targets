@@ -10,7 +10,7 @@
 
   <UsingTask
       TaskName="RippleRestoreTask.RestoreTask"
-      AssemblyFile="$(MSBuildThisFileDirectory)..\RippleRestoreTask.dll" />
+      AssemblyFile="$(MSBuildThisFileDirectory)RippleRestoreTask.dll" />
 
   <Target Name="RippleRestoreTarget">
     <RippleRestoreTask.RestoreTask SolutionDir="$(SolutionDir)"/>
@@ -18,8 +18,8 @@
 
   <!--Support for ncrunch-->
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)..\RippleRestoreTask.dll" />
-    <None Include="$(MSBuildThisFileDirectory)..\RippleRestoreTask.pdb" />
+    <None Include="$(MSBuildThisFileDirectory)RippleRestoreTask.dll" />
+    <None Include="$(MSBuildThisFileDirectory)RippleRestoreTask.pdb" />
   </ItemGroup>
 
 
