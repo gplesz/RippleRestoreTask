@@ -3,15 +3,6 @@ RippleRestoreTask
 
 ![](https://raw.github.com/Particular/RippleRestoreTask/master/Icons/package_icon.png)
 
-## How to get it
-
-[RippleRestoreTask is hosted on nuget](https://www.nuget.org/packages/RippleRestoreTask/)  
-
-And can be installed by running the following in the **Package Management Console:**
-
-    PM> Get-Project -All | Install-Package RippleRestoreTask
- 
-
 ## What does RippleRestoreTask do? 
 
 ### Firstly what is [Ripple](http://darthfubumvc.github.io/ripple/ripple/)? 
@@ -28,29 +19,12 @@ While you can have a "RunMeFirst.cmd" it is not really ideal. Developers expect 
 
 RippleRestoreTask achieves this by plugging into the build chain and before a build ensuring that your dependencies are up to date through calling `ripple.exe restore`.
 
-### Delivery and update of ripple.exe
-
-RippleRestoreTask is delivered via a nuget package. Since nuget handles delivery and (with nuget 2.7 and up) automatic solution level package restore. This design decision also means we can use nuget to update RippleRestoreTask.
-
-#### I though we were using Ripple for managing packages?
-
-Yes this is correct. However the way nuget adds RippleRestoreTask it will be excluded from Ripple handles packages. 
-
-So the chain is `nuget delivers RippleRestoreTask` > `RippleRestoreTask triggers ripple restore`.
-
 ## What is doesn't do
 
 RippleRestoreTask is targeted at providing one specific feature i.e. "Restoring dependencies as part of a build". If you want to use the other more advanced [commands of Ripple](http://darthfubumvc.github.io/ripple/ripple/commands/) you should call ripple.exe explicitly. This can be done at a machine level by adding Ripple.exe to your Path environment variable  
 
 ## Other bits
 
-### Install in every project
-
-The RippleRestoreTask should be installed in every project in the solution. This is due to the lack of a "solution level" build event in MSBuild. 
-
-This can be achieved by running the following in the **Package Management Console:**
-
-    PM> Get-Project -All | Install-Package RippleRestoreTask
 
 ### Only runs once per solution
 

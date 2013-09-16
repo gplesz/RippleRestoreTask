@@ -55,19 +55,10 @@ namespace RippleRestoreTask
         {
             var restoreCommand = new RestoreCommand();
 
-            var basic = SolutionFiles.Basic();
-            basic.RootDir = targetDirectory;
-            basic.BuildSupportDir = Path.Combine(targetDirectory, "buildsupport");
-
             var solutionFiles = SolutionFiles.FromDirectory(targetDirectory);
 
             var builder = new SolutionBuilder(solutionFiles, ProjectReader.Basic());
             var solution = builder.Build();
-
-            //if (RestoreAlreadyDone(solution))
-            //{
-            //    return;
-            //}
 
             var expression = RippleOperation
                 .With(solution);
