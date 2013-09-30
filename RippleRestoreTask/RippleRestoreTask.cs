@@ -57,8 +57,6 @@ namespace RippleRestoreTask
 
             var solutionFiles = SolutionFiles.Basic();
             solutionFiles.RootDir = targetDirectory;
-            solutionFiles.BuildSupportDir = Path.Combine(targetDirectory, "buildsupport");
-
             var builder = new SolutionBuilder(solutionFiles, ProjectReader.Basic());
             var solution = builder.Build();
 
